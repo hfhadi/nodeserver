@@ -6,8 +6,9 @@ const app = express();
 const port = 3000;
 
 // Replace with your Notion API key and database ID
-const NOTION_API_KEY = 'secret_7CQMiRICnGUqslPXXTx2fkamkPzel2k3DFpZiqDpICH';
-const NOTION_DATABASE_ID = '82566198aca9482c87ff3e2bdb7f484c';
+// karabala notion db
+const NOTION_API_KEY = 'secret_qC28KRlsKIdNPpySs0NKAW9y2YFvhqRhn64DKJRY2UU';
+const NOTION_DATABASE_ID = 'ff9ca896efcb45c99509c50fe4e23f64c';
 
 app.use(json());
 app.use(cors());
