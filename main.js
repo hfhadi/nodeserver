@@ -7,15 +7,15 @@ const port = 3000; // You can change the port if needed
 
 // Replace with your Notion API key and database ID
 const NOTION_API_KEY = 'secret_qC28KRlsKIdNPpySs0NKAW9y2YFvhqRhn64DKJRY2UU';
-const NOTION_DATABASE_ID = '42d381c5ab3d4423b1613aa0be752f77';
+const NOTION_DATABASE_ID = '82566198aca9482c87ff3e2bdb7f484c';
 
 app.use(json());
 app.use(cors());
 
 // Endpoint to query the Notion database
-app.post('/notion/query/:queryid', async (req, res) => {
+app.post('/notion/query', async (req, res) => {
   try {
-    const response = await fetch(`https://api.notion.com/v1/databases/${queryid}/query`, {
+    const response = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${NOTION_API_KEY}`,
