@@ -14,6 +14,8 @@ app.use(cors());
 
 // Endpoint to query the Notion database
 app.post('/notion/query/:queryid', async (req, res) => {
+
+ const queryid = req.params.queryid;
   try {
     const response = await fetch(`https://api.notion.com/v1/databases/${queryid}/query`, {
       method: 'POST',
