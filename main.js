@@ -23,7 +23,8 @@ app.post('/notion/query/:queryid/:notionkey', async (req, res) => {
       headers: {
         'Authorization': `Bearer ${notionkey}`,
         'Content-Type': 'application/json',
-        'Notion-Version': '2021-08-16'
+        'Notion-Version': '2021-08-16',
+        'Access-Control-Allow-Origin':'*'
       },
       body: JSON.stringify(req.body)
     });
@@ -50,7 +51,8 @@ app.get('/notion/page/:pageid/:notionkey', async (req, res) => {
       headers: {
         'Authorization': `Bearer ${notionkey}`,
         'Content-Type': 'application/json',
-        'Notion-Version': '2021-08-16'
+        'Notion-Version': '2021-08-16',
+         'Access-Control-Allow-Origin':'*'
       }
     });
 
