@@ -13,14 +13,15 @@ app.use(json());
 app.use(cors());
 
 // Endpoint to query the Notion database
-app.post('/notion/query/:queryid', async (req, res) => {
+app.post('/notion/query/:queryid/:notionkey', async (req, res) => {
 
  const queryid = req.params.queryid;
+ const notionkey = req.params.notionkey;
   try {
     const response = await fetch(`https://api.notion.com/v1/databases/${queryid}/query`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${NOTION_API_KEY}`,
+        'Authorization': `Bearer ${notionkey}`,
         'Content-Type': 'application/json',
         'Notion-Version': '2021-08-16'
       },
@@ -40,14 +41,14 @@ app.post('/notion/query/:queryid', async (req, res) => {
 });
 
 // Endpoint to retrieve a Notion page by its ID
-app.get('/notion/page/:pageid', async (req, res) => {
+app.get('/notion/page/:pageid/:notionkey', async (req, res) => {
   try {
     const pageid = req.params.pageid;
-
+    const notionkey = req.params.notionkey;
     const response = await fetch(`https://api.notion.com/v1/pages/${pageid}`, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${NOTION_API_KEY}`,
+        'Authorization': `Bearer ${notionkey}`,
         'Content-Type': 'application/json',
         'Notion-Version': '2021-08-16'
       }
