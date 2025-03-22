@@ -6,8 +6,8 @@ const app = express();
 const port = 3000; // You can change the port if needed
 
 // Replace with your Notion API key and database ID
-const NOTION_API_KEY = 'secret_qC28KRlsKIdNPpySs0NKAW9y2YFvhqRhn64DKJRY2UU';
-const NOTION_DATABASE_ID = '82566198aca9482c87ff3e2bdb7f484c';
+//const NOTION_API_KEY = 'secret_qC28KRlsKIdNPpySs0NKAW9y2YFvhqRhn64DKJRY2UU';
+//const NOTION_DATABASE_ID = '82566198aca9482c87ff3e2bdb7f484c';
 
 app.use(json());
 app.use(cors());
