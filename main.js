@@ -9,6 +9,7 @@ const port = 3000; // You can change the port if needed
 //const NOTION_API_KEY = 'secret_qC28KRlsKIdNPpySs0NKAW9y2YFvhqRhn64DKJRY2UU';
 //const NOTION_DATABASE_ID = '82566198aca9482c87ff3e2bdb7f484c';
 // need to change the key and id
+//another test
 app.use(json());
 app.use(cors());
 
